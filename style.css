@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;500;600;700&family=Poppins:wght@500;600&family=Raleway:wght@200;300;400;500&display=swap');
+:root{
+    --font-family-overpass: 'Overpass', sans-serif;
+    --font-family-popins: 'Poppins', sans-serif;
+    --font-family-raleway: 'Raleway', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/* *************************************** */
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+.page1{
+    min-height: 100vh;
+    background: radial-gradient(rgb(252, 226, 230),rgba(250, 194, 157, 0.664));
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    padding-top: 3em;
+}
+.navbar img{
+    width: 10em;
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
+.navbar ul li a{
+    font-size: 1.1em;
+    color: rgb(77, 75, 75);
+    padding: 0 5px;
+    font-family: var(--font-family-overpass);
+    position: relative;
+    transition: 0.5s ease;
+
+}
+.navbar ul li a:hover{
+    color: orangered;
+}
+.navbar ul li a::after{
+    content: "";
+    position:absolute;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -4px;
+    background-color: orangered;
+    transition: 0.5s ease;
+}
+.navbar ul li a:hover::after{
+    width: 100%;
+}
+.sec1main{
+    padding-top: 4em;
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.sec1main .sec1BgImg img{
+    width: 100%;
+}
+.sec1main .content h1{
+   font-size: 3.5em;
+   line-height: 1.2;
+   font-family: var(--font-family-popins);
+}
+.sec1main .content p{
+    padding: 1.5em 0 2.5em 0;
+    font-size: 1.1em;
+    line-height: 1.5;
+    font-family: var(--font-family-overpass);
+}
+.sec1main .content a{
+    color: #fff;
+    font-size: 1.2em;
+    padding: 0.5em 2em;
+    background-color: orangered;
+    border-radius: 5em;
+    box-shadow: 0 0 5px rgba(128, 128, 128, 0.466);
+    transition: 0.5s ease;
+}
+.sec1main .content a:hover{
+    background-color: rgba(255, 68, 0, 0.9);
+   /*  padding: 0.5em 2.5em; */
+    letter-spacing: 2px;
+}
+/* ***************************************** */
+.page2{
+    padding-top: 4em;
+}
+.page2 h2{
+    font-family: var(--font-family-popins);
+    font-size: 2em;
+    text-align: center;
+    position: relative;
+}
+.page2 h2::after{
+    content:"";
+    position: absolute;
+    width: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -3px;
+    background-color: orangered;
+    height: 3px;
+}
+.featureProductContainer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 70%;
+    margin: auto;
+    gap: 2em;
+    padding-top: 3em;
+}
+.featureProductContainer img{
+    width: 100%;
+}
+.featureProductContainer .item p{
+    font-family: var(--font-family-raleway);
+    font-size: 1.1em;
+    color: rgb(66, 65, 65);
+    padding: 0.5em 0 0.25em;
+}
+.price{
+    font-family: var(--font-family-overpass);
+    font-weight: 300;
+    font-size: 1.1em;
+    padding-top: 0.5em;
+    color: rgb(66, 65, 65);
+}
+.starRating input{
+    display: none;
+}
+.starRating{
+    padding-top: 0.2em;
+}
+.fa-star{
+    color: orangered;
+}
+.item{
+    position: relative;
+    transition: 0.3s ease;
+    top: 0;
+}
+.item:hover{
+    top: -10px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+/* **************************************************** */
+.page3{
+    padding-top: 5em;
+}
+.featureProductContainer3{
+    grid-template-columns: repeat(5,1fr);
+}
+/* ************************************************ */
+.page4{
+    min-height: 60vh;
+    background: radial-gradient(rgb(247, 236, 224),rgb(250, 187, 144));
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 5em;
+    
+}
+.page4Conatiner{
+    align-items: center;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    width: 75%;
+    justify-content: space-around;
+    margin-right: 10em;
+}
+.page4 .image img{
+    width: 400px;
+}
+.page4 .content p{
+    font-family: var(--font-family-overpass);
+    font-size: 1.15em;
+    line-height: 1.5;
+}
+.page4 .content h2{
+font-family: var(--font-family-popins);
+font-size: 2.5em;
+padding: 0.5em 0;
+}
+.paddingpara{
+    padding-bottom: 2em;
+}
+.page4 .content a{
+    padding: 0.4em 2em;
+    color: #fff;
+    background-color: orangered;
+    border-radius: 5em;
+    font-size: 1.2em;
+    font-family: var(--font-family-overpass);
+    transition: 0.3s ease;
+    box-shadow: 0 0 5px gray;
+}
+.page4 .content a:hover{
+    letter-spacing: 1.2px;
+    background-color: rgba(255, 68, 0, 0.808);
+    padding: 0.4em 2.5em;
+}
+footer{
+    text-align: center;
+    font-family: var(--font-family-raleway);
+    padding: 0.5em;
+}
+
+
